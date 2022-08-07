@@ -24,7 +24,9 @@ contract MockAirdrop {
         require(ERC20(associatedToken).transfer(msg.sender, 100e18));
     }
 
-    function getClaimSelector() external view returns(bytes4) {
-        return MockAirdrop(address(this)).claimAirdrop.selector;
+    function getClaimSelector() external view returns(bytes memory) {
+        bytes4 firstSelector = MockAirdrop(address(this)).claimAirdrop.selector;
+        bytes memory data = abi.encodeWithSelector(firstSelector);
+        return data;
     }
 }

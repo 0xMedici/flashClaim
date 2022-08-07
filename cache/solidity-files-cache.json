@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/gio/Desktop/flashClaim/contracts/FlashClaim.sol": {
-      "lastModificationDate": 1659816636193,
-      "contentHash": "4ca1b8d0f8a10bcdf1601aeb48046f76",
+      "lastModificationDate": 1659907301422,
+      "contentHash": "ece1ffe6a55e31c661bf2b50e06ae7fb",
       "sourceName": "contracts/FlashClaim.sol",
       "solcConfig": {
         "version": "0.8.4",
@@ -710,8 +710,8 @@
       ]
     },
     "/Users/gio/Desktop/flashClaim/contracts/MockAirdrop.sol": {
-      "lastModificationDate": 1659816620377,
-      "contentHash": "4a5ee1d012c72985bd913d750b3aeb5e",
+      "lastModificationDate": 1659907243947,
+      "contentHash": "0275f7394edec196a80686d51d2b162f",
       "sourceName": "contracts/MockAirdrop.sol",
       "solcConfig": {
         "version": "0.8.4",

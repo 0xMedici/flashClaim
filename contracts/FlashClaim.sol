@@ -43,12 +43,12 @@ contract FlashClaim is Initializable {
     /// @param _nft Address of the NFT 
     /// @param _id ID of the NFT
     /// @param _claimContract Contract where the airdrop is taking place.
-    /// @param selector Function selector of the airdrop claim function.
+    /// @param data Function selector of the airdrop claim function.
     function executeFlashClaim(
         address _nft, 
         uint256 _id, 
         address _claimContract,
-        bytes4 selector
+        bytes memory data
     ) external {
         require(msg.sender == permissionedWallet);
         IERC721(_nft).transferFrom(
@@ -57,7 +57,6 @@ contract FlashClaim is Initializable {
             _id
         );
 
-        bytes memory data = abi.encodeWithSelector(selector);
         (bool success, ) = address(_claimContract).call(data);
         require(success);
 
